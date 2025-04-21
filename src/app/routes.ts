@@ -13,4 +13,5 @@ const routeConfig: Routes = [
       title: 'Home details',
     },
   ];
+  'details/:id'
   export default routeConfig;
