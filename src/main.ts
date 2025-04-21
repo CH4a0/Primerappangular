@@ -4,7 +4,13 @@
  */
 import {bootstrapApplication, provideProtractorTestingSupport} from '@angular/platform-browser';
 import {AppComponent} from './app/app.component';
+import {provideRouter, Route} from '@angular/router';
 
-bootstrapApplication(AppComponent, {providers: [provideProtractorTestingSupport()]}).catch((err) =>
-  console.error(err),
-);
+const routeConfig: Route[] = [
+  // Define your routes here, for example:
+  // { path: '', component: HomeComponent },
+];
+
+bootstrapApplication(AppComponent, {
+  providers: [provideProtractorTestingSupport(), provideRouter(routeConfig)],
+}).catch((err) => console.error(err));
